@@ -1,0 +1,276 @@
+@mixin typography($font-size, $font-weight, $line-height, $color)
+{
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+$light-orange: #FF6E30;
+
+header 
+{
+    & .container
+    {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 26px 15px 58px;
+
+        & .logo
+        {
+            display: flex;
+            align-items: center;
+            gap: 21px;
+
+            & h4
+            {
+                @include typography(22px, 600, 33px, #FFFFFF);
+            }
+        }
+    
+        & ul
+        {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+
+            & li
+            {
+                @include typography(16px, 500, 24ox, #9a9d9f)
+            }
+
+            & svg
+            {
+                position: absolute;
+                top: 4px;
+                left: 182px;
+            }
+        }
+        & .buttons
+        {
+            display: flex;
+            align-items: center;
+            gap: 41px;
+
+            & button
+            {
+                @include typography(16px, 600, 24px, #a7aaac);
+                &:last-of-type
+                {
+                    background-color: #FF6E30;
+                    padding: 12px 28px;
+                    border-radius: 8px;
+                    color: #FDF5FF;
+                }
+            }
+        }
+    }
+}
+
+.tools
+{
+    & .container
+    {
+        height: 626px;
+        margin-top: 58px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        
+
+        & .column-1
+        {
+            & .content
+            {
+                h1
+                {
+                    @include typography(50px, 500, 70px, #e8e9e9);
+                    max-width: 600px;
+                    margin-bottom: 30px;
+
+                    & span
+                    {
+                        color: $light-orange;
+                    }
+                }
+                h4
+                {
+                    @include typography(18px, 400, 30px, #9a9d9f);
+                    max-width: 480px;
+                    margin-bottom: 60px;
+                }
+
+                & .search
+                {
+                    background-color: #283036;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 15px;
+                    border: 1.5px #333a40 solid;
+                    width: 498px;
+
+                    & .placeholder
+                    {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        width: calc(100% - 131px);
+
+                        & svg
+                        {
+                            position: absolute;
+                            left: 18px;
+                        }
+
+                        & input
+                        {
+                            @include typography(14px, 400, 21px, #7a7f82);
+                            height: 100%;
+                            width: calc(100% - 10px);
+                            position: relative;
+                            left: 18px;
+
+                            &::placeholder
+                            {
+                                position: relative;
+                                left: 37px;
+                            }
+                        }
+                    }
+
+                    & button
+                    {
+                        @include typography(16px, 600, 24px, #FFFFFF);
+                        background-color: $light-orange;
+                        padding: 12px 36px;
+                        border-radius: 8px;
+                        margin: 8px 11px;
+                    }
+                }
+            }
+            & .icons
+            {
+                display: flex;
+                gap: 19px;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        & .column-2
+        {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+.popular .container
+{
+    padding: 200px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .title
+    {
+        & h1
+        {
+            @include typography(48px, 500, 62.4px, #e8e9e9);
+            margin-bottom: 25px
+        }
+
+        & h2
+        {
+            @include typography(18px, 500, 30px, #9a9d9f);
+            max-width: 430px;
+            margin-bottom: 90px;
+            text-align: center;
+        }
+    }
+
+    & ul
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 392px);
+        grid-template-rows: repeat(3, 294px);
+        gap: 25px 100px;
+        
+
+        & li
+        {
+            padding: 33px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-radius: 15px;
+            transition: 0.25s ease-in-out;
+
+            & h3
+            {
+                @include typography(24px, 500, 36px, #cecfd0);
+            }
+
+            & h4
+            {
+                @include typography(18px, 400, 27px, #9a6c31);
+            }
+
+            & h5
+            {
+                @include typography(16px, 400, 30px, #9a9d9f);
+            }
+
+            
+            & .icons
+            {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+
+                & button
+                {
+                    @include typography(16px, 600, 24px, #9a9d9f);
+                    padding: 9px 35px;
+                    border-radius: 8px;
+                }
+            }
+
+        &:hover
+        {
+            transform: translateY(-20px);
+            background-color: #242c31;
+            background: linear-gradient(135deg, #00E5E6, #00A8F7, #9A76F9, #CC5EC2);
+
+            h3
+            {
+                color: #e9e9ea;
+            }
+            h4
+            {
+                color: #ffa537;
+            }
+            h5
+            {
+                color: #cfd1d2;
+            }
+            button
+            {
+                color: #ffffff;
+            }
+            .icons svg:first-of-type path
+            {
+                fill: #FD3B41;
+                fill-opacity: 1;
+            }
+        }
+        }
+    }
+}
