@@ -86,13 +86,15 @@ header .container .burger {
   }
 }
 
+.tools {
+  position: relative;
+}
 .tools .container {
   height: 626px;
   margin-top: 58px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
 }
 .tools .container .column-1 .content h1 {
   font-size: 50px;
@@ -113,7 +115,7 @@ header .container .burger {
   max-width: 480px;
   margin-bottom: 60px;
 }
-.tools .container .column-1 .content .search {
+.tools .container .column-1 .content .input {
   background-color: #283036;
   position: relative;
   display: flex;
@@ -121,53 +123,47 @@ header .container .burger {
   border-radius: 15px;
   border: 1.5px #333a40 solid;
   width: 498px;
-}
-.tools .container .column-1 .content .search .placeholder {
-  display: flex;
-  align-items: center;
+  height: 100%;
+  padding: 8px 0;
   height: 48px;
-  width: calc(100% - 131px);
 }
-.tools .container .column-1 .content .search .placeholder svg {
+.tools .container .column-1 .content .input svg {
   position: absolute;
   left: 18px;
 }
-.tools .container .column-1 .content .search .placeholder input {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #7a7f82;
+.tools .container .column-1 .content .input input {
   height: 100%;
-  width: calc(100% - 10px);
+  width: calc(100% - 200px);
+  left: 50px;
   position: relative;
-  left: 18px;
 }
-.tools .container .column-1 .content .search .placeholder input::-moz-placeholder {
+.tools .container .column-1 .content .input input::-moz-placeholder {
   position: relative;
-  left: 37px;
+  left: 5px;
 }
-.tools .container .column-1 .content .search .placeholder input::placeholder {
+.tools .container .column-1 .content .input input::placeholder {
   position: relative;
-  left: 37px;
+  left: 5px;
 }
-.tools .container .column-1 .content .search button {
+.tools .container .column-1 .content .input button {
   padding: 12px 36px;
-  margin: 8px 11px;
-  border-radius: 8px;
+  position: absolute;
+  right: 11px;
 }
 .tools .container .column-1 .icons {
   display: flex;
   gap: 19px;
   position: absolute;
   bottom: 0;
+  left: 110px;
 }
 .tools .container .column-1 .icons svg {
   cursor: pointer;
 }
 .tools .container .column-2 {
   position: absolute;
-  bottom: 0;
   right: 0;
+  bottom: 0;
 }
 
 .popular .container {
@@ -558,15 +554,15 @@ header .container .burger {
 }
 .contributor .container .input input {
   height: 100%;
-  width: calc(100% - 145px);
+  width: calc(100% - 168px);
+  left: 24px;
+  position: relative;
 }
 .contributor .container .input input::-moz-placeholder {
   position: absolute;
-  left: 24px;
 }
 .contributor .container .input input::placeholder {
   position: absolute;
-  left: 24px;
 }
 .contributor .container .input button {
   padding: 12px 36px;

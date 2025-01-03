@@ -26,4 +26,6 @@ input
 {
     appearance: none;
     background-color: initial;
+    outline: none;   
+
 }
