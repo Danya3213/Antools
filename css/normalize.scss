@@ -1,3 +1,12 @@
+$light-orange: #FF6E30;
+@mixin typography($font-size, $font-weight, $line-height, $color)
+{
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
 *{
     font-family: 'Poppins';
 }
@@ -5,6 +14,15 @@
 body
 {
     background-color: #1e252b;
+}
+
+
+
+button
+{
+    @include typography(16px, 600, 24px, #FFFFFF);
+    background-color: $light-orange;
+    border-radius: 8px;
 }
 
 .container
