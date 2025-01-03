@@ -739,11 +739,13 @@ footer
             & h4
             {
                 @include typography(20px, 500, 30px, #FFFFFFE5);
+                margin-bottom: 20px
             }
 
             & h5
             {
                 @include typography(16px, 500, 24px, #FFFFFF8C);
+                margin-bottom: 10px;
             }
         }
 
@@ -773,7 +775,7 @@ footer
         & ul
         {
             display: grid;
-            grid-template-columns: 260px 197px 108px 142px;
+            grid-template-columns: 281px 197px 108px 150px;
             gap: 115px;
         }
     }

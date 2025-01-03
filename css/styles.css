@@ -583,12 +583,14 @@ footer .container .column h4 {
   font-weight: 500;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.8980392157);
+  margin-bottom: 20px;
 }
 footer .container .column h5 {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.5490196078);
+  margin-bottom: 10px;
 }
 footer .container .column-1 {
   margin-right: 41px;
@@ -617,6 +619,6 @@ footer .container .column-1 h5 {
 }
 footer .container ul {
   display: grid;
-  grid-template-columns: 260px 197px 108px 142px;
+  grid-template-columns: 281px 197px 108px 150px;
   gap: 115px;
 }/*# sourceMappingURL=styles.css.map */
