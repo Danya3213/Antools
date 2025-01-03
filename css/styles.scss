@@ -1,12 +1,4 @@
-@mixin typography($font-size, $font-weight, $line-height, $color)
-{
-    font-size: $font-size;
-    font-weight: $font-weight;
-    line-height: $line-height;
-    color: $color;
-}
-
-$light-orange: #FF6E30;
+@import "mixins.scss", "templates.scss", "reset.scss", "normalize.scss";
 
 header 
 {
@@ -79,19 +71,11 @@ header
             & button
             {
                 color: #a7aaac;
-                background-color: #1e252b;
+                background-color: $dark-blue;
                 &:last-of-type
                 {
                     padding: 12px 28px;
-                    border-radius: 8px;
-                    color: #FDF5FF;
-                    background-color: $light-orange;
-
-                    &:hover
-                    {
-                        background-color: #FFFFFF;
-                        color: #000000;
-                    }
+                    @extend %orange-button;
                 }
             }
         }
@@ -117,8 +101,6 @@ header
         }
     }
 }
-
-
 
 .tools
 {
@@ -178,14 +160,8 @@ header
                     {
                         height: 100%;
                         width: calc(100% - 200px);
-                        left: 50px;
+                        left: 55px;
                         position: relative;
-
-                        &::placeholder
-                        {
-                            position: relative;
-                            left: 5px;
-                        }
                     }
 
                     & button
@@ -193,8 +169,8 @@ header
                         padding: 12px 36px;
                         position: absolute;
                         right: 11px;
+                        @extend %orange-button;
                     }
-                    
                 }
             }
 
@@ -205,9 +181,25 @@ header
                 position: absolute;
                 bottom: 0;
                 left: 110px;
+                
                 & svg
                 {
                     cursor: pointer;
+                    transition: 0.25s ease-in-out;
+
+                    &:hover
+                    {
+                        transform: translateY(-20px);
+                        fill: #FFFFFF;
+                        box-shadow: 0 5px 20px 5px #00000040;
+                        border-radius: 8px;
+
+                        & path
+                        {
+                            fill-opacity: 1;
+                            transition: 0.25s ease-in-out;
+                        }
+                    }
                 }
             }
         }
@@ -217,6 +209,8 @@ header
             position: absolute;
             right: 0;
             bottom: 0;
+            height: 568px;
+            width: 589px;
         }
     }
 }
@@ -261,7 +255,7 @@ header
             gap: 30px;
             border-radius: 15px;
             transition: 0.45s ease-in-out;
-            border: 2px solid #1e252b;
+            border: 2px solid $dark-blue;
             position: relative;
             z-index: 1;
 
@@ -288,29 +282,26 @@ header
                 justify-content: space-between;
                 align-items: center;
                 cursor: pointer;
-                position: relative;
 
                 & button
                 {
-                    color: #9a9d9f;
+                    @extend %list-button;
                     padding: 9px 35px;
-                    border-radius: 8px;
-                    background-color: #1e252b;
                 }
 
                 & svg
                 {
                     bottom: 0;
                     transition: 0.15s ease-in-out;
-
-                    &:first-of-type{
-                        position: absolute;
-                        left: 0;
-                    }
-                    &:last-of-type
+                    border-radius: 8px;
+                    & rect
                     {
-                        position: absolute;
-                        left: 60px;
+                        fill: #1E252B;
+                    }
+
+                    &:first-of-type
+                    {
+                        margin-right: 12px;
                     }
                 }
                 
@@ -323,8 +314,8 @@ header
                 backdrop-filter: blur(50%);
                 background: linear-gradient(225deg, #3a3332, #242c31, #242c31, #242c31, #242c31);
                 border: 2px solid #2e343a;
+                box-shadow: 0 5px 20px 5px #00000040;
                 
-
                 h3
                 {
                     color: #e9e9ea;
@@ -340,16 +331,6 @@ header
                     color: #cfd1d2;
                     transition: 0.45s ease-in-out;
                 }
-                button
-                {
-                    color: #ffffff;
-                    transition: 0.22s ease-in-out;
-                    background-color: $light-orange;
-                    &:hover {
-                        background-color: #FFFFFF;
-                        color: #000000;
-                    }
-                }
                 .icons svg
                 {
                     
@@ -357,10 +338,7 @@ header
                     {
                         &:hover
                         {
-                            width: 47px;
-                            height: 47px;
-                            left: -2px;
-                            bottom: -2px;
+                            transform: scale(110%);
                         }
                         & path
                         {
@@ -373,16 +351,29 @@ header
                     {
                         &:hover
                         {
-                            width: 47px;
-                            height: 47px;
-                            left: 58px;
-                            bottom: -2px;
+                            transform: scale(110%);
                         }
                         & path
                         {
                             fill-opacity: 1;
                             transition: 0.45s ease-in-out;
                             fill: #FFFFFF;
+                        }
+                        
+                    }
+
+                    & rect
+                    {
+                        fill: #283036;
+                        opacity: 0.6;
+                    }
+
+                    &:hover {
+                        box-shadow: 0px 9px 20px 0 #00000045;
+                        & rect
+                        {
+                            fill: #283036;
+                            opacity: 1;
                         }
                     }
                 }
@@ -393,11 +384,12 @@ header
     & > button
     {
         color: $light-orange;
-        background-color: #1e252b;
+        background-color: $dark-blue;
         padding: 17px 38px;
         border: 1px solid #FFFFFF1A;
         border-radius: 8px;
         margin-top: 100px;
+        transition: 0.25s ease-in-out;
         &:hover
         {
             background-color: #FFFFFF25;
@@ -428,6 +420,17 @@ header
             display: flex;
             justify-content: space-around;
             width: 100%;
+
+            & img
+            {
+                transition: 0.25s ease-in-out;
+                cursor: pointer;
+
+                &:hover
+                {
+                    transform: translateY(-15px);
+                }
+            }
         }
     }
 }
@@ -458,8 +461,7 @@ header
 
             button
             {
-
-                border-radius: 8px;
+                @extend %orange-button;
                 padding: 16px 40px;
             }
         }
@@ -511,22 +513,15 @@ header
 
                         & button
                         {
-                            background-color: #1e252b;
-                            color: #FFFFFF8C;
                             padding: 9px 35px;
-                            transition: 0.22s ease-in-out;
-                            &:hover {
-                                background-color: #FFFFFF;
-                                color: #000000;
-
-                            }
+                            @extend %list-button;
                         }
 
                         & svg
                         {
                             bottom: 0;
                             transition: 0.15s ease-in-out;
-
+                            border-radius: 8px;
                             &:first-of-type{
                                 position: absolute;
                                 left: 0;
@@ -535,6 +530,10 @@ header
                             {
                                 position: absolute;
                                 left: 55px;
+                            }
+                            & rect
+                            {
+                                fill: #1E252B;
                             }
                         }
                     }
@@ -545,6 +544,8 @@ header
                         backdrop-filter: blur(50%);
                         background: linear-gradient(225deg, #3a3332, #242c31, #242c31, #242c31, #242c31);
                         border: 2px solid #2e343a;
+                        box-shadow: 0 5px 20px 5px #00000040;
+
                         h4
                         {
                             color: #e9e9ea;
@@ -560,12 +561,7 @@ header
                             color: #cfd1d2;
                             transition: 0.45s ease-in-out;
                         }
-                        button
-                        {
-                            color: #ffffff;
-                            transition: 0.25s ease-in-out;
-                            background-color: $light-orange;
-                        }
+                        
                         .icons svg
                         {
                             &:first-of-type
@@ -599,6 +595,20 @@ header
                                     height: 47px;
                                     left: 53px;
                                     bottom: -2px;
+                                }
+                            }
+                            & rect
+                                {
+                                    fill: #283036;
+                                    opacity: 0.6;
+                                }
+
+                            &:hover {
+                                box-shadow: 0px 9px 20px 0 #00000045;
+                                & rect
+                                {
+                                    fill: #283036;
+                                    opacity: 1;
                                 }
                             }
                         }
@@ -718,6 +728,7 @@ header
 
             & button
             {
+                @extend %orange-button;
                 padding: 12px 36px;
                 position: absolute;
                 right: 12px;
@@ -756,6 +767,7 @@ footer
             {
                 display: flex;
                 @include typography(22px, 600, 33px, #FFFFFFE5);
+                gap: 12px;
             }
 
             & h4

@@ -1,3 +1,104 @@
+.contributor .container .input button, .newcomer .container .column-1 button, .tools .container .column-1 .content .input button, header .container .buttons button:last-of-type, .newcomer .container .column-2 ul li:hover .icons button, .popular .container ul li:hover .icons button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #FF6E30;
+  border-radius: 8px;
+  transition: 0.22s ease-in-out;
+}
+.contributor .container .input button:hover, .newcomer .container .column-1 button:hover, .tools .container .column-1 .content .input button:hover, header .container .buttons button:hover:last-of-type, .newcomer .container .column-2 ul li:hover .icons button:hover, .popular .container ul li:hover .icons button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.newcomer .container .column-2 ul li .icons button, .popular .container ul li .icons button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #FFFFFF;
+  color: #9a9d9f;
+  border-radius: 8px;
+  background-color: #1e252b;
+}
+body {
+  margin: 0px;
+}
+
+* {
+  margin: 0px;
+  padding: 0;
+  border: 0;
+}
+
+button {
+  background-color: initial;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: initial;
+  outline: none;
+}
+
+.contributor .container .input button, .newcomer .container .column-1 button, .tools .container .column-1 .content .input button, header .container .buttons button:last-of-type, .newcomer .container .column-2 ul li:hover .icons button, .popular .container ul li:hover .icons button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #FFFFFF;
+  background-color: #FF6E30;
+  border-radius: 8px;
+  transition: 0.22s ease-in-out;
+}
+.contributor .container .input button:hover, .newcomer .container .column-1 button:hover, .tools .container .column-1 .content .input button:hover, header .container .buttons button:hover:last-of-type, .newcomer .container .column-2 ul li:hover .icons button:hover, .popular .container ul li:hover .icons button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.newcomer .container .column-2 ul li .icons button, .popular .container ul li .icons button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #FFFFFF;
+  color: #9a9d9f;
+  border-radius: 8px;
+  background-color: #1e252b;
+}
+* {
+  font-family: "Poppins";
+}
+
+body {
+  background-color: #1e252b;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1410px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
+  background: #FF6E30;
+}
+
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+  background: #FF6E30;
+}
+
 header .container {
   height: 48px;
   display: flex;
@@ -61,13 +162,6 @@ header .container .buttons button {
 }
 header .container .buttons button:last-of-type {
   padding: 12px 28px;
-  border-radius: 8px;
-  color: #FDF5FF;
-  background-color: #FF6E30;
-}
-header .container .buttons button:last-of-type:hover {
-  background-color: #FFFFFF;
-  color: #000000;
 }
 header .container .burger {
   display: none;
@@ -134,16 +228,8 @@ header .container .burger {
 .tools .container .column-1 .content .input input {
   height: 100%;
   width: calc(100% - 200px);
-  left: 50px;
+  left: 55px;
   position: relative;
-}
-.tools .container .column-1 .content .input input::-moz-placeholder {
-  position: relative;
-  left: 5px;
-}
-.tools .container .column-1 .content .input input::placeholder {
-  position: relative;
-  left: 5px;
 }
 .tools .container .column-1 .content .input button {
   padding: 12px 36px;
@@ -159,11 +245,24 @@ header .container .burger {
 }
 .tools .container .column-1 .icons svg {
   cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+.tools .container .column-1 .icons svg:hover {
+  transform: translateY(-20px);
+  fill: #FFFFFF;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 8px;
+}
+.tools .container .column-1 .icons svg:hover path {
+  fill-opacity: 1;
+  transition: 0.25s ease-in-out;
 }
 .tools .container .column-2 {
   position: absolute;
   right: 0;
   bottom: 0;
+  height: 568px;
+  width: 589px;
 }
 
 .popular .container {
@@ -229,25 +328,20 @@ header .container .burger {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  position: relative;
 }
 .popular .container ul li .icons button {
-  color: #9a9d9f;
   padding: 9px 35px;
-  border-radius: 8px;
-  background-color: #1e252b;
 }
 .popular .container ul li .icons svg {
   bottom: 0;
   transition: 0.15s ease-in-out;
+  border-radius: 8px;
+}
+.popular .container ul li .icons svg rect {
+  fill: #1E252B;
 }
 .popular .container ul li .icons svg:first-of-type {
-  position: absolute;
-  left: 0;
-}
-.popular .container ul li .icons svg:last-of-type {
-  position: absolute;
-  left: 60px;
+  margin-right: 12px;
 }
 .popular .container ul li:hover {
   transform: translateY(-20px);
@@ -256,6 +350,7 @@ header .container .burger {
           backdrop-filter: blur(50%);
   background: linear-gradient(225deg, #3a3332, #242c31, #242c31, #242c31, #242c31);
   border: 2px solid #2e343a;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.2509803922);
 }
 .popular .container ul li:hover h3 {
   color: #e9e9ea;
@@ -269,20 +364,8 @@ header .container .burger {
   color: #cfd1d2;
   transition: 0.45s ease-in-out;
 }
-.popular .container ul li:hover button {
-  color: #ffffff;
-  transition: 0.22s ease-in-out;
-  background-color: #FF6E30;
-}
-.popular .container ul li:hover button:hover {
-  background-color: #FFFFFF;
-  color: #000000;
-}
 .popular .container ul li:hover .icons svg:first-of-type:hover {
-  width: 47px;
-  height: 47px;
-  left: -2px;
-  bottom: -2px;
+  transform: scale(110%);
 }
 .popular .container ul li:hover .icons svg:first-of-type path {
   fill: #FD3B41;
@@ -290,15 +373,23 @@ header .container .burger {
   transition: 0.45s ease-in-out;
 }
 .popular .container ul li:hover .icons svg:last-of-type:hover {
-  width: 47px;
-  height: 47px;
-  left: 58px;
-  bottom: -2px;
+  transform: scale(110%);
 }
 .popular .container ul li:hover .icons svg:last-of-type path {
   fill-opacity: 1;
   transition: 0.45s ease-in-out;
   fill: #FFFFFF;
+}
+.popular .container ul li:hover .icons svg rect {
+  fill: #283036;
+  opacity: 0.6;
+}
+.popular .container ul li:hover .icons svg:hover {
+  box-shadow: 0px 9px 20px 0 rgba(0, 0, 0, 0.2705882353);
+}
+.popular .container ul li:hover .icons svg:hover rect {
+  fill: #283036;
+  opacity: 1;
 }
 .popular .container > button {
   color: #FF6E30;
@@ -307,6 +398,7 @@ header .container .burger {
   border: 1px solid rgba(255, 255, 255, 0.1019607843);
   border-radius: 8px;
   margin-top: 100px;
+  transition: 0.25s ease-in-out;
 }
 .popular .container > button:hover {
   background-color: rgba(255, 255, 255, 0.1450980392);
@@ -335,6 +427,13 @@ header .container .burger {
   justify-content: space-around;
   width: 100%;
 }
+.trusted .container ul img {
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+.trusted .container ul img:hover {
+  transform: translateY(-15px);
+}
 
 .newcomer .container {
   display: flex;
@@ -361,7 +460,6 @@ header .container .burger {
   margin-bottom: 60px;
 }
 .newcomer .container .column-1 button {
-  border-radius: 8px;
   padding: 16px 40px;
 }
 .newcomer .container .column-2 ul {
@@ -407,18 +505,12 @@ header .container .burger {
   position: relative;
 }
 .newcomer .container .column-2 ul li .icons button {
-  background-color: #1e252b;
-  color: rgba(255, 255, 255, 0.5490196078);
   padding: 9px 35px;
-  transition: 0.22s ease-in-out;
-}
-.newcomer .container .column-2 ul li .icons button:hover {
-  background-color: #FFFFFF;
-  color: #000000;
 }
 .newcomer .container .column-2 ul li .icons svg {
   bottom: 0;
   transition: 0.15s ease-in-out;
+  border-radius: 8px;
 }
 .newcomer .container .column-2 ul li .icons svg:first-of-type {
   position: absolute;
@@ -428,6 +520,9 @@ header .container .burger {
   position: absolute;
   left: 55px;
 }
+.newcomer .container .column-2 ul li .icons svg rect {
+  fill: #1E252B;
+}
 .newcomer .container .column-2 ul li:hover {
   transform: translateY(-20px);
   background-color: rgba(40, 48, 54, 0.6);
@@ -435,6 +530,7 @@ header .container .burger {
           backdrop-filter: blur(50%);
   background: linear-gradient(225deg, #3a3332, #242c31, #242c31, #242c31, #242c31);
   border: 2px solid #2e343a;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.2509803922);
 }
 .newcomer .container .column-2 ul li:hover h4 {
   color: #e9e9ea;
@@ -447,11 +543,6 @@ header .container .burger {
 .newcomer .container .column-2 ul li:hover h6 {
   color: #cfd1d2;
   transition: 0.45s ease-in-out;
-}
-.newcomer .container .column-2 ul li:hover button {
-  color: #ffffff;
-  transition: 0.25s ease-in-out;
-  background-color: #FF6E30;
 }
 .newcomer .container .column-2 ul li:hover .icons svg:first-of-type path {
   fill: #FD3B41;
@@ -474,6 +565,17 @@ header .container .burger {
   height: 47px;
   left: 53px;
   bottom: -2px;
+}
+.newcomer .container .column-2 ul li:hover .icons svg rect {
+  fill: #283036;
+  opacity: 0.6;
+}
+.newcomer .container .column-2 ul li:hover .icons svg:hover {
+  box-shadow: 0px 9px 20px 0 rgba(0, 0, 0, 0.2705882353);
+}
+.newcomer .container .column-2 ul li:hover .icons svg:hover rect {
+  fill: #283036;
+  opacity: 1;
 }
 
 .person .container {
@@ -601,6 +703,7 @@ footer .container .column-1 .logo {
   font-weight: 600;
   line-height: 33px;
   color: rgba(255, 255, 255, 0.8980392157);
+  gap: 12px;
 }
 footer .container .column-1 h4 {
   font-size: 16px;

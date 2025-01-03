@@ -1,0 +1,30 @@
+@import "mixins.scss";
+
+$light-orange: #FF6E30;
+$dark-blue: #1e252b;
+
+%orange-button
+{
+
+    @include typography(16px, 600, 24px, #FFFFFF);
+    background-color: $light-orange;
+    border-radius: 8px;
+    transition: 0.22s ease-in-out;
+    &:hover{
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+}
+
+%list-button
+{
+    @include typography(16px, 600, 24px, #FFFFFF);
+    color: #9a9d9f;
+    border-radius: 8px;
+    background-color: $dark-blue;
+
+    li:hover &
+    {
+        @extend %orange-button;
+    }
+}

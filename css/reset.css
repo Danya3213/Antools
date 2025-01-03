@@ -1,31 +1,27 @@
-body
-{
-    margin: 0px;
+body {
+  margin: 0px;
 }
 
-*
-{
-    margin: 0px;
-    padding: 0;
-    border: 0;
+* {
+  margin: 0px;
+  padding: 0;
+  border: 0;
 }
 
-button
-{
-    background-color: initial;
-    cursor: pointer;
-    color: #FFFFFF;
+button {
+  background-color: initial;
+  cursor: pointer;
+  color: #FFFFFF;
 }
 
-ul
-{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-input
-{
-    appearance: none;
-    background-color: initial;
-    outline: none;   
-
-}
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: initial;
+  outline: none;
+}/*# sourceMappingURL=reset.css.map */
