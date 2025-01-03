@@ -13,6 +13,11 @@ button {
   color: #FFFFFF;
   background-color: #FF6E30;
   border-radius: 8px;
+  transition: 0.22s ease-in-out;
+}
+button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .container {

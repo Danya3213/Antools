@@ -85,7 +85,6 @@ header
                     padding: 12px 28px;
                     border-radius: 8px;
                     color: #FDF5FF;
-                    transition: .2s ease-in-out;
                     background-color: $light-orange;
 
                     &:hover
@@ -290,6 +289,8 @@ header
                 width: 100%;
                 justify-content: space-between;
                 align-items: center;
+                cursor: pointer;
+                position: relative;
 
                 & button
                 {
@@ -298,6 +299,23 @@ header
                     border-radius: 8px;
                     background-color: #1e252b;
                 }
+
+                & svg
+                {
+                    bottom: 0;
+                    transition: 0.15s ease-in-out;
+
+                    &:first-of-type{
+                        position: absolute;
+                        left: 0;
+                    }
+                    &:last-of-type
+                    {
+                        position: absolute;
+                        left: 60px;
+                    }
+                }
+                
             }
 
             &:hover
@@ -327,14 +345,48 @@ header
                 button
                 {
                     color: #ffffff;
-                    transition: 0.45s ease-in-out;
+                    transition: 0.22s ease-in-out;
                     background-color: $light-orange;
+                    &:hover {
+                        background-color: #FFFFFF;
+                        color: #000000;
+                    }
                 }
-                .icons svg:first-of-type path
+                .icons svg
                 {
-                    fill: #FD3B41;
-                    fill-opacity: 1;
-                    transition: 0.45s ease-in-out;
+                    
+                    &:first-of-type
+                    {
+                        &:hover
+                        {
+                            width: 47px;
+                            height: 47px;
+                            left: -2px;
+                            bottom: -2px;
+                        }
+                        & path
+                        {
+                            fill: #FD3B41;
+                            fill-opacity: 1;
+                            transition: 0.45s ease-in-out;
+                        }
+                    }   
+                    &:last-of-type
+                    {
+                        &:hover
+                        {
+                            width: 47px;
+                            height: 47px;
+                            left: 58px;
+                            bottom: -2px;
+                        }
+                        & path
+                        {
+                            fill-opacity: 1;
+                            transition: 0.45s ease-in-out;
+                            fill: #FFFFFF;
+                        }
+                    }
                 }
             }
             
@@ -348,6 +400,11 @@ header
         border: 1px solid #FFFFFF1A;
         border-radius: 8px;
         margin-top: 100px;
+        &:hover
+        {
+            background-color: #FFFFFF25;
+            color: #FFFFFF;
+        }
     }
 }
 
@@ -427,6 +484,7 @@ header
                     width: 245px;
                     transition: 0.45s ease-in-out;
                     border: 2px #1e252b solid;
+                    border-radius: 15px;
                     
                     & h4
                     {
@@ -451,12 +509,35 @@ header
                         justify-content: space-between;
                         align-items: center;
                         width: 100%;
+                        position: relative;
 
                         & button
                         {
                             background-color: #1e252b;
                             color: #FFFFFF8C;
                             padding: 9px 35px;
+                            transition: 0.22s ease-in-out;
+                            &:hover {
+                                background-color: #FFFFFF;
+                                color: #000000;
+
+                            }
+                        }
+
+                        & svg
+                        {
+                            bottom: 0;
+                            transition: 0.15s ease-in-out;
+
+                            &:first-of-type{
+                                position: absolute;
+                                left: 0;
+                            }
+                            &:last-of-type
+                            {
+                                position: absolute;
+                                left: 55px;
+                            }
                         }
                     }
                     &:hover
@@ -484,14 +565,44 @@ header
                         button
                         {
                             color: #ffffff;
-                            transition: 0.45s ease-in-out;
+                            transition: 0.25s ease-in-out;
                             background-color: $light-orange;
                         }
-                        .icons svg:first-of-type path
+                        .icons svg
                         {
-                            fill: #FD3B41;
-                            fill-opacity: 1;
-                            transition: 0.45s ease-in-out;
+                            &:first-of-type
+                            {
+                                & path
+                                {
+                                    fill: #FD3B41;
+                                    fill-opacity: 1;
+                                    transition: 0.45s ease-in-out;
+                                }
+                                &:hover
+                                {
+                                    width: 47px;
+                                    height: 47px;
+                                    left: -2px;
+                                    bottom: -2px;
+                                }
+                            }
+                            &:last-of-type
+                            {
+                                & path
+                                {
+                                    fill: #FFFFFF;
+                                    fill-opacity: 1;
+                                    transition: 0.45s ease-in-out;
+                                    
+                                }
+                                &:hover
+                                {
+                                    width: 47px;
+                                    height: 47px;
+                                    left: 53px;
+                                    bottom: -2px;
+                                }
+                            }
                         }
                     }
                 }

@@ -23,6 +23,13 @@ button
     @include typography(16px, 600, 24px, #FFFFFF);
     background-color: $light-orange;
     border-radius: 8px;
+    transition: 0.22s ease-in-out;
+
+    &:hover
+    {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
 }
 
 .container
